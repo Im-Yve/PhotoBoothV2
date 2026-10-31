@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf7f2">
+    <title>Make It Yours — Little Moments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header"><a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">✿</span> little moments<span class="brand-dot">.</span></a><span class="header-note">a little pause. a lovely memory.</span></header>
+    <main class="page editor-page">
+        <nav class="steps" aria-label="Your progress"><a href="index.html">✓ <span>Strike a pose</span></a><span class="step-line"></span><span class="active" aria-current="step">02 <span>Make it yours</span></span></nav>
+        <div class="page-heading"><span class="eyebrow">THE FINISHING TOUCHES</span><h1>A little more <em>you.</em></h1><p>Find your frame, leave a little note, and keep the moment.</p></div>
+        <div class="editor-workspace">
+            <section class="panel tools" aria-label="Photo editing tools">
+                <div class="tools-title"><h2>Make it yours</h2><span aria-hidden="true">✦</span></div>
+                <fieldset class="control-group"><legend>01 / Layout</legend><div class="layout-options" id="layoutOptions"></div></fieldset>
+                <fieldset class="control-group"><legend>02 / Pick a background <span id="backgroundName" class="selected-name">Ivory</span></legend><div class="background-options" id="backgroundOptions"></div></fieldset>
+                <fieldset class="control-group details-group">
+                    <legend>03 / The little details</legend>
+                    <label class="toggle-row" for="textToggle"><span><strong>Add text</strong><small>A few words to remember it by</small></span><input class="switch-input" type="checkbox" id="textToggle"><span class="switch" aria-hidden="true"></span></label>
+                    <div id="textControls" class="text-controls" hidden><label class="input-label" for="customText">Your caption</label><input type="text" id="customText" maxlength="60" placeholder="e.g. us, being us ♡"><span class="helper-text">Up to 60 characters · updates as you type</span></div>
+                    <label class="toggle-row" for="dateToggle"><span><strong>Add date</strong><small>A tiny timestamp for your memories</small></span><input class="switch-input" type="checkbox" id="dateToggle"><span class="switch" aria-hidden="true"></span></label>
+                    <label class="color-row" for="fontColor"><span>Text color</span><input type="color" id="fontColor" value="#443b48"></label>
+                </fieldset>
+                <div class="editor-actions"><button class="button button-accent button-full" id="downloadBtn">Download Photo Strip <span aria-hidden="true">↓</span></button><a class="button button-secondary button-full" href="index.html"><span aria-hidden="true">←</span> Back to Camera</a><p class="helper-text">A high-quality PNG, ready to save & share.</p></div>
+            </section>
+            <section class="preview-panel" aria-label="Photo strip preview">
+                <div class="preview-topline"><span class="section-label">YOUR LITTLE MASTERPIECE</span><span class="preview-live"><span class="live-dot"></span> Live preview</span></div>
+                <div class="preview-stage"><span class="preview-doodle doodle-one" aria-hidden="true">✧</span><span class="preview-doodle doodle-two" aria-hidden="true">♡</span><div class="print-wrap" id="printWrap"><span class="tape" aria-hidden="true"></span><canvas id="photoStrip" role="img" aria-label="Your customized photo strip"></canvas></div></div>
+                <p id="editorStatus" class="preview-status" role="status" aria-live="polite"></p>
+                <p class="preview-caption">a keepsake, with your kind of magic.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer"><span>little moments, lasting memories.</span><span>MADE TO BE KEPT ♡</span></footer>
+    <script src="booth.js"></script>
+    <script src="editor.js"></script>
+</body>
+</html>

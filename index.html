@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf7f2">
+    <title>Little Moments — Photo Booth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">✿</span> little moments<span class="brand-dot">.</span></a>
+        <span class="header-note">a little pause. a lovely memory.</span>
+    </header>
+    <main class="page">
+        <nav class="steps" aria-label="Your progress"><span class="active" aria-current="step">01 <span>Strike a pose</span></span><span class="step-line"></span><span>02 <span>Make it yours</span></span></nav>
+        <div class="page-heading"><span class="eyebrow">YOUR OWN LITTLE PHOTO BOOTH</span><h1>Good times. <em>Captured.</em></h1><p>Pick a layout, gather your favorite people, and make a memory.</p></div>
+        <div class="camera-workspace">
+            <section class="camera-panel" aria-label="Camera">
+                <div class="panel-topline"><span class="section-label"><span class="live-dot"></span> THE LIVE VIEW</span><span class="small-note">Made for your main-character moment</span></div>
+                <div class="viewfinder">
+                    <video id="video" autoplay playsinline muted aria-label="Live camera preview"></video>
+                    <div class="camera-message" id="cameraMessage" role="status"><span class="camera-message-icon" aria-hidden="true">◎</span><strong>Getting your camera ready…</strong><span>Allow camera access to get started.</span></div>
+                    <div class="viewfinder-corner top-left"></div><div class="viewfinder-corner bottom-right"></div>
+                    <span class="camera-badge">a moment worth keeping ✦</span>
+                    <div class="flash" id="flash"></div>
+                </div>
+                <div class="capture-bar"><p id="captureHint">Your next favorite memory starts here.</p><button class="button button-dark capture-button" id="takePhotoBtn" disabled><span class="shutter-icon" aria-hidden="true"></span> Take photo</button><button class="button button-secondary" id="retryCameraBtn" hidden>Try camera again</button></div>
+                <p class="status-message" id="cameraStatus" role="status" aria-live="polite"></p>
+            </section>
+            <aside class="panel session-panel">
+                <div><span class="eyebrow">LET’S SET THE SCENE</span><h2>A frame for every mood.</h2><p class="muted">Choose how your story comes together.</p></div>
+                <fieldset class="control-group"><legend>01 / Choose your layout</legend><div class="layout-options" id="layoutOptions"></div></fieldset>
+                <div class="session-heading"><h3>Your snapshots</h3><span class="count-badge" id="photoCount">0 / 3</span></div>
+                <div class="snapshot-grid" id="photoStrip" aria-label="Captured photos"></div>
+                <button class="text-button" id="retakeBtn" disabled><span aria-hidden="true">↻</span> Start over</button>
+                <div class="session-bottom"><button class="button button-accent button-full" id="goToEditorBtn" disabled>Make it yours <span aria-hidden="true">↗</span></button><p class="helper-text" id="sessionHint">Take all your photos to open the editor.</p></div>
+            </aside>
+        </div>
+        <p class="page-footnote"><span aria-hidden="true">✧</span> No perfect poses needed. Just be you.</p>
+    </main>
+    <footer class="site-footer"><span>little moments, lasting memories.</span><span>MADE TO BE KEPT ♡</span></footer>
+    <canvas id="canvas" hidden></canvas>
+    <script src="booth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
